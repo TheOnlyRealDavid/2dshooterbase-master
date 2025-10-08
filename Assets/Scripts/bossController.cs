@@ -24,7 +24,7 @@ public class bossController : MonoBehaviour
         //================================================================
         //Hälsa på boss skäppet
         //----------------------------------------------------------------
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "bolt")
         {
             bossCurentHp -= 1;
 
