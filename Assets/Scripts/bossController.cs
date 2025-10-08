@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class bossController : MonoBehaviour
 {
@@ -7,6 +6,9 @@ public class bossController : MonoBehaviour
     float bossCurentHp = 0;
     [SerializeField]
     float bossMaxHp = 10;
+
+    [SerializeField]
+    GameObject boomPrefab;
 
 
     void Start()
@@ -18,8 +20,8 @@ public class bossController : MonoBehaviour
     {
 
     }
-    
-     void OnTriggerEnter2D(Collider2D collision)
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
         //================================================================
         //Hälsa på boss skäppet
@@ -30,14 +32,14 @@ public class bossController : MonoBehaviour
 
             if (bossCurentHp <= 0)
             {
-                print("GAME OVER");
-                SceneManager.LoadScene("Gameover");
+                print("Boss Down");
             }
         }
         if (bossCurentHp == 0)
         {
-
+            Instantiate(boomPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
+
         }
 
     }
