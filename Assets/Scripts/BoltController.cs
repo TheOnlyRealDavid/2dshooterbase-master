@@ -23,7 +23,7 @@ public class BoltController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 

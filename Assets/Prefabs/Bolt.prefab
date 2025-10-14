@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   boltspeed: 20
+  bossPrefab: {fileID: 749799462768361211, guid: 425436ecd9ded9948a4de5bc83c7cf29,
+    type: 3}
 --- !u!70 &7177020879612016630
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
