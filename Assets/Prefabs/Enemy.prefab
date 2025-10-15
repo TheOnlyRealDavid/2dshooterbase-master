@@ -130,7 +130,7 @@ MonoBehaviour:
   enemySpeed: 1
   enemyPrefab: {fileID: 1455718659814362}
   boomPrefab: {fileID: 1052859802758272, guid: 7e5c5b1c1b18764459c69710c7dc4adc, type: 3}
-  bossprefab: {fileID: 749799462768361211, guid: 425436ecd9ded9948a4de5bc83c7cf29,
+  bossPrefab: {fileID: 749799462768361211, guid: 425436ecd9ded9948a4de5bc83c7cf29,
     type: 3}
 --- !u!58 &7027003653301299614
 CircleCollider2D:

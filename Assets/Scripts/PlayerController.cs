@@ -48,10 +48,10 @@ public class PlayerController : MonoBehaviour
         {
             //======================================================
             //Ljud vid skot
+            //------------------------------------------------------
             AudioSource speaker = GetComponent<AudioSource>();
-
             speaker.Play();
-            //-------------------------------------------------------
+    
 
             Instantiate(boltPrefab, transform.position, Quaternion.identity);
             timeSinceLastShot = 0;

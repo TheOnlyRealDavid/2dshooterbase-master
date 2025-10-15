@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class bossController : MonoBehaviour
@@ -10,14 +11,26 @@ public class bossController : MonoBehaviour
     [SerializeField]
     GameObject boomPrefab;
 
+    GameObject player;
+
 
     void Start()
     {
         bossCurentHp = bossMaxHp;
+        player = GameObject.Find("Ship");
     }
 
     void Update()
     {
+
+        if (player.transform.position.x <= this.gameObject.transform.position.x)
+        {
+
+        }
+        else if (player.transform.position.x >= this.gameObject.transform.position.x)
+        {
+            
+        }
 
     }
 

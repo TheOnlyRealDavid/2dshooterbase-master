@@ -1137,6 +1137,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1455718659814362, guid: bf43fe3ed09cec246b4f2f367f9817fa,
     type: 3}
   timeBetweenEnemys: 0.7
+  bossCountdown: 0
 --- !u!4 &2037354329
 Transform:
   m_ObjectHideFlags: 0

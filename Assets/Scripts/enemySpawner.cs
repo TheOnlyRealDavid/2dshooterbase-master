@@ -13,22 +13,17 @@ public class enemySpawner : MonoBehaviour
     void Update()
     {
 
-
-        
-
          //====================================================================
-        //Enemy spawn rate
-        //--------------------------------------------------------------------
+         //Enemy spawn rate
+         //--------------------------------------------------------------------
 
-       
-         timeSinceLastEnemy += Time.deltaTime;
+
+        timeSinceLastEnemy += Time.deltaTime;
         if (timeSinceLastEnemy > timeBetweenEnemys)
         {
 
             Instantiate(enemyPrefab);
             timeSinceLastEnemy = 0;
-        }
-        
-       
+        } 
     }
 }
