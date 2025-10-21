@@ -13,6 +13,11 @@ public class bossController : MonoBehaviour
 
     GameObject player;
 
+    [SerializeField]
+    float bossSpeed = 2.5f;
+
+    [SerializeField]
+    GameObject RedBoltPrefab;
 
     void Start()
     {
@@ -25,12 +30,13 @@ public class bossController : MonoBehaviour
 
         if (player.transform.position.x <= this.gameObject.transform.position.x)
         {
-
+            transform.Translate(Vector2.left * bossSpeed * Time.deltaTime);
         }
         else if (player.transform.position.x >= this.gameObject.transform.position.x)
         {
-            
+            transform.Translate(Vector2.right * bossSpeed * Time.deltaTime);
         }
+
 
     }
 
