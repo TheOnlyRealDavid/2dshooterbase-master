@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         //================================================================
         //Hälsa på skäppet
         //----------------------------------------------------------------
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "redBolt")
         {
             currentHp -= 1;
             hpSlider.value = currentHp;

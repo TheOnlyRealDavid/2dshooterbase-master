@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6532233275132342471}
   m_Layer: 0
   m_Name: RedBolt
-  m_TagString: Untagged
+  m_TagString: redBolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

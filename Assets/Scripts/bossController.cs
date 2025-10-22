@@ -19,6 +19,13 @@ public class bossController : MonoBehaviour
     [SerializeField]
     GameObject RedBoltPrefab;
 
+    //==========================================
+    // Hur ofta bossen kommer skjuta
+    //------------------------------------------
+    float TidenSedanSkot = 0;
+    [SerializeField]
+    float TidenMellanSkot = 0.5f;
+
     void Start()
     {
         bossCurentHp = bossMaxHp;
@@ -35,6 +42,21 @@ public class bossController : MonoBehaviour
         else if (player.transform.position.x >= this.gameObject.transform.position.x)
         {
             transform.Translate(Vector2.right * bossSpeed * Time.deltaTime);
+        }
+
+        //===================================
+        // Bossen skjuter
+        //-----------------------------------
+
+        TidenSedanSkot += Time.deltaTime;
+
+        if (TidenSedanSkot > TidenMellanSkot)
+        {
+            AudioSource speaker = GetComponent<AudioSource>();
+            speaker.Play();
+
+            Instantiate(RedBoltPrefab, transform.position, Quaternion.identity);
+            TidenSedanSkot = 0;
         }
 
 
